@@ -1,14 +1,23 @@
 <mvc:View
 	controllerName="sap.ui.ope.controller.Home"
+    xmlns:fb="sap.ui.comp.filterbar"
 	xmlns:l="sap.ui.layout"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m">
     <Page showHeader="false">
         <content>
-            <l:HorizontalLayout class="sapUiSmallMargin" >
-                <Label text="{i18n>poPageCenter}" />
-                <Input/>
-            </l:HorizontalLayout>
+            
+            <fb:FilterBar showFilterConfiguration="false"
+				deltaVariantMode="false" useToolbar="false" showRestoreOnFB="flase" showGoOnFB="flase">
+                <fb:filterItems>
+                    <fb:FilterItem name="A" label="Delivery Date">
+                        <fb:control>
+                            <Label></Label>
+                        </fb:control>				
+                    </fb:FilterItem>				
+                </fb:filterItems>             
+            </fb:FilterBar>	
+            
         </content>        
     </Page>
 </mvc:View>
