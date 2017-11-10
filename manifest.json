@@ -1,0 +1,67 @@
+{
+  "_version": "1.1.0",
+  "sap.app": {
+	"_version": "1.1.0",
+	"id": "sap.ui.ope",
+	"type": "application",
+	"i18n": "i18n/i18n.properties",
+	"title": "STA",
+	"description": "{{appDescription}}",
+	"applicationVersion": {
+	  "version": "1.0.0"
+	}
+  },
+  "sap.ui": {
+	"_version": "1.1.0",
+	"technology": "UI5",
+	"deviceTypes": {
+	  "desktop": true,
+	  "tablet": true,
+	  "phone": true
+	},
+	"supportedThemes": [
+	  "sap_belize"
+	]
+  },
+  "sap.ui5": {
+	"_version": "1.1.0",
+	"rootView": "sap.ui.ope.view.App",
+	"dependencies": {
+	  "minUI5Version": "1.30",
+	  "libs": {
+		"sap.m": {}
+	  }
+	},
+	"models": {
+	  "i18n": {
+		"type": "sap.ui.model.resource.ResourceModel",
+		"settings": {
+		  "bundleName": "sap.ui.ope.i18n.i18n"
+		}
+	  }
+	},
+      "routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "sap.ui.ope.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"transition": "slide"
+			},
+			"routes": [{
+				"pattern": "",
+				"name": "home",
+				"target": "home"
+			}],
+			"targets": {
+				"home": {
+                    "path": "sap.ui.ope.view",
+					"viewName": "Home",
+                    "viewId" : "viewHome",
+                    "viewLevel" : 2
+				}
+			}
+		}
+  }
+}

@@ -1,0 +1,14 @@
+<mvc:View
+	controllerName="sap.ui.ope.controller.Home"
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+    <Page showHeader="false">
+        <content>
+            <l:HorizontalLayout class="sapUiSmallMargin" >
+                <Label text="{i18n>poPageCenter}" />
+                <Input/>
+            </l:HorizontalLayout>
+        </content>        
+    </Page>
+</mvc:View>
